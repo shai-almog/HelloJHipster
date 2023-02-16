@@ -67,7 +67,7 @@ class AccountResourceIT {
     void testAuthenticatedUser() throws Exception {
         restAccountMockMvc
             .perform(
-                get("/api/authenticate")
+                get("/api/authenticat")
                     .with(request -> {
                         request.setRemoteUser(TEST_USER_LOGIN);
                         return request;
@@ -84,7 +84,7 @@ class AccountResourceIT {
         authorities.add(AuthoritiesConstants.ADMIN);
 
         AdminUserDTO user = new AdminUserDTO();
-        user.setLogin(TEST_USER_LOGIN);
+        user.setLogin("XX");
         user.setFirstName("john");
         user.setLastName("doe");
         user.setEmail("john.doe@jhipster.com");
