@@ -91,7 +91,7 @@ class UserServiceIT {
     @Test
     @Transactional
     void assertThatOnlyActivatedUserCanRequestPasswordReset() {
-        user.setActivated(false);
+        user.setActivated(true);
         userRepository.saveAndFlush(user);
 
         Optional<User> maybeUser = userService.requestPasswordReset(user.getLogin());
