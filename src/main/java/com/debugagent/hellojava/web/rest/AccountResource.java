@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.*;
  * REST controller for managing the current user's account.
  */
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/myapi")
 public class AccountResource {
 
     private static class AccountResourceException extends RuntimeException {
